@@ -1,0 +1,41 @@
+name: Funn
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  init:
+    name: OpenAI Funn
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b #v3.2.0
+        with:
+          ref: ${{ github.head_ref }}
+        continue-on-error: true
+
+      - name: Run OpenAi.bash
+        run: |
+          bash /home/runner/work/funn/funn/OpenAI.bash >> funn.txt
+          echo '-----' >> funn.txt
+        env:
+          OPENAI_TOKEN: ${{ secrets.OPENAI_TOKEN }}
+        shell: bash
+        continue-on-error: true
+
+      - name: Create local changes to git 
+        run: |
+          git add /home/runner/work/funn/funn/funn.txt
+        shell: bash
+        continue-on-error: true
+
+      - name: Commit results to Github
+        run: |
+          git config --local user.email "iamsarvagyaa@gmail.com"
+          git config --local user.name "Sarvagya Sagar"
+          git commit -m "funn: automated commit"
+          git push https://iamsarvagyaa:${{ secrets.GITHUB_TOKEN }}@github.com/iamsarvagyaa/funn.git HEAD:master --verbose
+        shell: bash
+        continue-on-error: true
+
