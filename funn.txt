@@ -128,3 +128,6 @@ How do you know if a hacker is in your house? All your electrons are in their co
 Why did the chicken cross the road?
 To get to the other side of the cultural divide.
 -----
+What's the difference between a blockchain and a toilet?
+A blockchain is full of blocks.
+-----
