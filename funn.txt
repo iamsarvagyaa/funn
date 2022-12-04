@@ -159,3 +159,6 @@ What's the best way to describe Bitcoin? A digital ledger of all the things I ca
  male movie stars
 What do you call a handsome male movie star who's in his 50s? "Too old for me."
 -----
+Why did the chicken cross the blockchain?
+To get to the other side of the ledger!
+-----
