@@ -171,3 +171,6 @@ To get to the other side of the network!
  drivers
 Why are bad drivers such a problem? Because they're not paying attention!
 -----
+ day
+I'm having a really bad day. I'm so glad I'm not you.
+-----
