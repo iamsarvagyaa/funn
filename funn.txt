@@ -195,3 +195,6 @@ I don't know, but I'm pretty sure you can put a
 Why did the chicken cross the road?
 To get to the other side... of the fridge.
 -----
+Why did the Ethereum fork?
+Because the original blockchain was too easy to mine!
+-----
